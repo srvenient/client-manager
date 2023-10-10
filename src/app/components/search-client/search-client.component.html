@@ -1,0 +1,50 @@
+<div class="d-flex">
+  <div class="w-25">
+    <div class="input-group border rounded">
+      <input class="form-control border-dark rounded-0" [(ngModel)]="sharedKey" type="search" placeholder="Enter shared key"
+             aria-label="Search">
+      <div class="input-group-append">
+        <button class="btn border-dark rounded-0" type="button" (click)="getClientBySharedKey()">Search</button>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary mx-5" type="button" (click)="toggle()">Advance search</button>
+</div>
+
+<div class="container-md col-md-5 bg" [@showAndHide]="show ? 'show' : 'hide'">
+  <form>
+    <div class="row mb-3">
+      <label for="businessId" class="col-sm-2 col-form-label">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="businessId" name="businessId">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="phone" name="phone">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="email" class="col-sm-2 col-form-label">E-mail:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="startDate" class="col-sm-2 col-form-label">Start Date:</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" id="startDate" name="startDate">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="endDate" class="col-sm-2 col-form-label">End Date:</label>
+      <div class="col-sm-10">
+        <input type="date" class="form-control" id="endDate" name="endDate">
+      </div>
+    </div>
+    <div class="button justify-content-start">
+      <button type="submit" class="btn btn-primary">OK</button>
+    </div>
+  </form>
+</div>
