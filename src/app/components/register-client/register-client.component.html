@@ -1,0 +1,72 @@
+<div class="container col-md-6 offset-md-3 bg">
+  <div class="container mt-2">
+    <h4>Create New Client</h4>
+    <hr>
+    <form (ngSubmit)="onSubmit()" #clientForm=ngForm>
+      <div class="row mb-3">
+        <label for="businessId" class="col-sm-2 col-form-label">Name:</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="businessId" [(ngModel)]="client.businessId" name="businessId"
+                 required minlength="4" maxlength="50" #businessId="ngModel">
+          <div class="alert alert-danger" *ngIf="businessId.invalid && (businessId.dirty || businessId.touched)">
+            <div *ngIf="businessId.errors.hasOwnProperty('required')">
+              Business ID is required.
+            </div>
+            <div *ngIf="businessId.errors.hasOwnProperty('minlength')">
+              Business ID must be at least 3 characters long.
+            </div>
+            <div *ngIf="businessId.errors.hasOwnProperty('maxlength')">
+              Business ID cannot be more than 50 characters long.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+        <div class="col-sm-10">
+          <input type="tel" class="form-control" id="phone" [(ngModel)]="client.phone" name="phone"
+                 required pattern="^(\+\d{1,3}\s?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$" #phone="ngModel">
+          <div class="alert alert-danger" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+            <div *ngIf="phone.errors.hasOwnProperty('required')">
+              Phone is required.
+            </div>
+            <div *ngIf="phone.errors.hasOwnProperty('pattern')">
+              Phone is not valid.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="email" class="col-sm-2 col-form-label">E-mail:</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email" [(ngModel)]="client.email" name="email"
+                 pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+                 required #email=ngModel>
+          <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div *ngIf="email.errors.hasOwnProperty('required')">
+              Email is required.
+            </div>
+            <div *ngIf="email.errors.hasOwnProperty('pattern')">
+              Email is not valid.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="startDate" class="col-sm-2 col-form-label">Start Date:</label>
+        <div class="col-sm-10">
+          <input type="date" class="form-control" id="startDate" name="startDate" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="endDate" class="col-sm-2 col-form-label">End Date:</label>
+        <div class="col-sm-10">
+          <input type="date" class="form-control" id="endDate" name="endDate">
+        </div>
+      </div>
+      <div class="button">
+        <button type="submit" class="btn btn-primary" [disabled]="!clientForm.form.valid">OK</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -3,12 +3,12 @@
     <ul class="navbar-nav flex-column m-lg-3 me-10 col-md-1 mx-3 mb-lg-1">
       <li>
         <a class="navbar-brand navbar-title" href="#">
-          <img src="../assets/logo_alianza.png" alt="Logo" width="38" height="38" class="d-inline-block align-text-top">
+          <img src="../assets/logo.png" alt="Logo" width="38" height="38" class="d-inline-block align-text-top">
           Alianza
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="ri-user-line"></i>Clients</a>
+        <a class="nav-link text-size" href="#"><i class="ri-user-line"></i>Clients</a>
       </li>
       <li class="nav-item">
         <a class="nav-link active" href="#">Clients</a>
@@ -26,21 +26,7 @@
   </div>
 </nav>
 <main class="container fixed-top">
-  <div class="container mt-xxl-5">
-    <div class="d-grid gap-3 d-md-flex justify-content-md-start">
-      <button class="btn btn-primary" type="button" routerLink="register-employee"><i class="ri-add-line"></i> New</button>
-      <button class="btn btn-primary" type="button"><i class="ri-file-user-line"></i> Export</button>
-    </div>
-  </div>
-  <div class="container mt-xxl-4 d-flex">
-    <form class="d-flex w-25" role="search">
-      <input class="form-control border-dark" type="search" placeholder="Enter shared key" aria-label="Search">
-      <button class="btn border-dark" type="submit">Search</button>
-    </form>
-
-    <button class="btn btn-primary mx-5" type="button">Advance search</button>
-  </div>
-  <div class="container mt-5">
+  <div class="container mt-4">
     <router-outlet></router-outlet>
   </div>
 </main>

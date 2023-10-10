@@ -1,13 +1,15 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
-import {EmployeeComponent} from "./components/employee/employee.component";
-import {RegisterEmployeeComponent} from "./components/register-employee/register-employee.component";
+import {ClientComponent} from "./components/client/client.component";
+import {RegisterClientComponent} from "./components/register-client/register-client.component";
+import {SearchClientComponent} from "./components/search-client/search-client.component";
 
 const routes: Routes = [
-  {path: 'employees', component: EmployeeComponent},
-  {path: '', redirectTo: 'employees', pathMatch: 'full'},
-  {path: 'register-employee', component: RegisterEmployeeComponent}
+  {path: 'clients', component: ClientComponent},
+  {path: '', redirectTo: 'clients', pathMatch: 'full'},
+  {path: 'clients/register-client', component: RegisterClientComponent},
+  {path: 'clients/:sharedKey', component: SearchClientComponent},
 ];
 
 @NgModule({
