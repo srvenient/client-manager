@@ -3,24 +3,28 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {EmployeeComponent} from './components/employee/employee.component';
 import {HttpClientModule} from "@angular/common/http";
 import {NgOptimizedImage} from "@angular/common";
-import { RegisterEmployeeComponent } from './components/register-employee/register-employee.component';
 import {FormsModule} from "@angular/forms";
+import {ClientComponent} from './components/client/client.component';
+import {RegisterClientComponent} from './components/register-client/register-client.component';
+import {SearchClientComponent} from './components/search-client/search-client.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent,
-    RegisterEmployeeComponent
+    ClientComponent,
+    RegisterClientComponent,
+    SearchClientComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgOptimizedImage,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
