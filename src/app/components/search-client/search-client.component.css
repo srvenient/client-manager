@@ -2,6 +2,6 @@
   background: rgb(204, 229, 255);
   border: 1px solid black; /* Borde negro de 2 píxeles de grosor */
   border-radius: 10px; /* Esquinas redondeadas de 10 píxeles de radio */
-  padding: 10px; /* Espacio interno dentro del div */;
+  padding: 30px; /* Espacio interno dentro del div */;
   margin: 0.68rem !important;
 }
