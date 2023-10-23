@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations';
 import {ActivatedRoute} from "@angular/router";
-import {ClientService} from "../../../client.service";
+import {ClientService} from "../../../services/client/client.service";
 import {ClientComponent} from "../client.component";
 import {MatDialog} from "@angular/material/dialog";
 import {BsModalService} from "ngx-bootstrap/modal";
