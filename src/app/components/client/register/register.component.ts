@@ -1,14 +1,14 @@
 import {Component, OnInit} from '@angular/core';
-import {ClientService} from "../../client.service";
+import {ClientService} from "../../../client.service";
 import {Router} from "@angular/router";
-import {ClientModel} from "../../models/client.model";
+import {ClientModel} from "../../../models/client.model";
 
 @Component({
-  selector: 'app-register-client',
-  templateUrl: './register-client.component.html',
-  styleUrls: ['./register-client.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class RegisterClientComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   client: ClientModel = new ClientModel()
 
