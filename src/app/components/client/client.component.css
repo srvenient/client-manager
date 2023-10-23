@@ -1,0 +1,4 @@
+.scrollable-table {
+    max-height: 270px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Permite el desplazamiento vertical si es necesario */
+}
