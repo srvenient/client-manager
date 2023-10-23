@@ -1,3 +1,6 @@
+/**
+ * Client model
+ */
 export class ClientModel {
   sharedKey: string;
   businessId: string;
